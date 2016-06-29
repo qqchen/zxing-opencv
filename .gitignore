@@ -1,4 +1,18 @@
 .DS_Store
 /.idea/
 /build/
+*.opensdf
+*.obj
+Debug/*
+Release/*
+*.sdf
+*.suo
+*.obj
+*.png
+*.jpg
+*.tif
+*.tiff
+*.txt
+*.db
+
 
