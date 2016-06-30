@@ -293,20 +293,28 @@ int recognizeBarcode(const std::string& filename,
 
 void decode_image(Reader *reader, cv::Mat &image);
 
-void CheckCode(string pathfile, Rect roi);
+void CheckCode(string pathfile, string dirpath, Rect roi);
 
 int main()
 {
-	const string filename = "test.png";
-	Rect roi(1090, 370, 454, 210);
-	//vector<string> codes;
-	//recognizeBarcode(filename, roi, codes);
-	//for (size_t i = 0; i < codes.size(); i++)
-	//{
-	//	cout << codes[i] << endl;
-	//}
+	//#if UNITTEST
+	//	const string filename = "test.png";
+	//	Rect roi(683, 460, 468, 270);
+	//	vector<string> codes;
+	//	recognizeBarcode(filename, roi, codes);
+	//	for (size_t i = 0; i < codes.size(); i++)
+	//	{
+	//		cout << codes[i] << endl;
+	//	}
+	//	waitKey(0);
+	//	return 1;
+	//#endif
 
-	CheckCode("./filepath.txt", roi);
+	//const string path = "d:\\test\\2.0\\1002647\\10108\\scandata\\Image"; // 2.0
+	const string path = "D:\\work\\volumeImage\\100004\\Image"; // 1.5
+	const string datapath = path + "\\" + "ScanData.txt";
+	Rect roi(683, 460, 468, 270);
+	CheckCode(datapath, path, roi);
 
 	//Mat image = imread(filename, 0);
 	//Ref<Reader> reader(new MultiFormatReader);
@@ -589,13 +597,15 @@ string GetFileNameInDir(const char* fileDir)
 }
 
 
-void CheckCode(string pathfile, Rect roi)
+void CheckCode(string pathfile, string dirpath, Rect roi)
 {
 	ifstream ifs;
 	ifs.open(pathfile.c_str());
 	ofstream ofs;
 	ofs.open("data.txt");
 
+	vector<string> failImages, wrongImages;
+	int all = 0, right = 0;
 	string line;
 	while (true)
 	{
@@ -605,20 +615,67 @@ void CheckCode(string pathfile, Rect roi)
 		if (line.empty())
 			break;
 
-		string file = GetFileNameInDir(line.c_str());
-		cout << " image : " << file << endl;
-		ofs << file << endl;
+		size_t extPos = line.find_last_of(";");
+		if (extPos == std::string::npos) {
+			cout << "Invalid data" << std::endl;
+			continue;
+		}
+		std::string file = line.substr(0, extPos);
+		std::string expected = line.substr(extPos + 1, line.size() - extPos - 1);
+		cout << "file : " << file << endl;
+		cout << "expected : " << expected << endl;
 
-		// 识别客观题区
+		string fullpath = dirpath + "\\" + file;
+		// 识别客观题
+
+		Mat image = imread(fullpath, 0);
+		//ZXingBarcodeDetector zxingDetector;
+		//string code;
+		//if (zxingDetector.Detect(image, code))
+		//{
+		//	if (code == expected)
+		//		right++;
+		//	else
+		//		wrongImages.push_back(file);
+		//}
+		//else
+		//{
+		//	failImages.push_back(file);
+		//}
+
 		vector<string> codes;
-		recognizeBarcode(line, roi, codes);
+		if (recognizeBarcode(fullpath, roi, codes) != 0)
+			failImages.push_back(file);
+
 		for (size_t i = 0; i < codes.size(); i++)
 		{
 			cout << "reusult : " << codes[i] << endl;
 			ofs << codes[i] << endl;
+			all++;
+			if (codes[i] == expected)
+				right++;
+			else
+				wrongImages.push_back(file);
 		}
-
 	}
+
+	ofs << "decode fail size : " << failImages.size() << endl;
+	for (size_t i = 0; i < failImages.size(); i++)
+	{
+		ofs << failImages[i] << endl;
+	}
+
+	ofs << "decode wrong size : " << wrongImages.size() << endl;
+	for (size_t i = 0; i < wrongImages.size(); i++)
+	{
+		ofs << wrongImages[i] << endl;
+	}
+
+	cout << "result : " << right << " / " << all << endl;
+	ofs << "result : " << right << " / " << all << endl;
+
+
 	ifs.close();
 	ofs.close();
+	waitKey(0);
 }
