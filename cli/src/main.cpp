@@ -42,6 +42,8 @@
 #include "zxing\common\GreyscaleLuminanceSource.h"
 #include "zxing\common\Array.h"
 #include "OpenCVBitmapSource.h"
+#include "ZBarWin64\include\zbar.h"
+//#include "zbar-decoder.h"
 
 using namespace std;
 using namespace zxing;
@@ -160,95 +162,6 @@ int read_image(Ref<LuminanceSource> source, bool hybrid, string expected) {
 	return res;
 }
 
-int my_read_image(Ref<LuminanceSource> source, bool hybrid, vector<string>& codes) {
-	vector<Ref<Result> > results;
-	string cell_result;
-	int res = -1;
-
-	try {
-		Ref<Binarizer> binarizer;
-		if (hybrid) {
-			binarizer = new HybridBinarizer(source);
-		}
-		else {
-			binarizer = new GlobalHistogramBinarizer(source);
-		}
-		DecodeHints hints(DecodeHints::DEFAULT_HINT);
-		try_harder = true;
-		hints.setTryHarder(try_harder);
-		Ref<BinaryBitmap> binary(new BinaryBitmap(binarizer));
-		search_multi = false;
-		if (search_multi) {
-			results = decode_multi(binary, hints);
-		}
-		else {
-			results = decode(binary, hints);
-		}
-		res = 0;
-	}
-	catch (const ReaderException& e) {
-		cell_result = "zxing::ReaderException: " + string(e.what());
-		res = -2;
-	}
-	catch (const zxing::IllegalArgumentException& e) {
-		cell_result = "zxing::IllegalArgumentException: " + string(e.what());
-		res = -3;
-	}
-	catch (const zxing::Exception& e) {
-		cell_result = "zxing::Exception: " + string(e.what());
-		res = -4;
-	}
-	catch (const std::exception& e) {
-		cell_result = "std::exception: " + string(e.what());
-		res = -5;
-	}
-
-	//if (test_mode && results.size() == 1) {
-	//	std::string result = results[0]->getText()->getText();
-	//	if (expected.empty()) {
-	//		cout << "  Expected text or binary data for image missing." << endl
-	//			<< "  Detected: " << result << endl;
-	//		res = -6;
-	//	}
-	//	else {
-	//		if (expected.compare(result) != 0) {
-	//			cout << "  Expected: " << expected << endl
-	//				<< "  Detected: " << result << endl;
-	//			cell_result = "data did not match";
-	//			res = -6;
-	//		}
-	//	}
-	//}
-
-	if (res != 0 && (verbose || (use_global ^ use_hybrid))) {
-		cout << (hybrid ? "Hybrid" : "Global")
-			<< " binarizer failed: " << cell_result << endl;
-	}
-	else if (!test_mode) {
-		if (verbose) {
-			cout << (hybrid ? "Hybrid" : "Global")
-				<< " binarizer succeeded: " << endl;
-		}
-		for (size_t i = 0; i < results.size(); i++) {
-			if (more) {
-				cout << "  Format: "
-					<< BarcodeFormat::barcodeFormatNames[results[i]->getBarcodeFormat()]
-					<< endl;
-				for (int j = 0; j < results[i]->getResultPoints()->size(); j++) {
-					cout << "  Point[" << j << "]: "
-						<< results[i]->getResultPoints()[j]->getX() << " "
-						<< results[i]->getResultPoints()[j]->getY() << endl;
-				}
-			}
-			if (verbose) {
-				cout << "    ";
-			}
-			cout << results[i]->getText()->getText() << endl;
-		}
-	}
-
-	return res;
-}
 
 string read_expected(string imagefilename) {
 	string textfilename = imagefilename;
@@ -291,34 +204,32 @@ int read_image(Ref<LuminanceSource> source, bool hybrid,
 int recognizeBarcode(const std::string& filename,
 	cv::Rect rect, std::vector<std::string>& codes);
 
-void decode_image(Reader *reader, cv::Mat &image);
+bool decode_image(cv::Mat &image, string& code, int& lib);
 
-void CheckCode(string pathfile, string dirpath, Rect roi);
+void CheckCode(string pathfile, string dirpath);
+
+bool DecodeByZBar(Mat& img, string& code);
 
 int main()
 {
-	//#if UNITTEST
-	//	const string filename = "test.png";
-	//	Rect roi(683, 460, 468, 270);
-	//	vector<string> codes;
-	//	recognizeBarcode(filename, roi, codes);
-	//	for (size_t i = 0; i < codes.size(); i++)
-	//	{
-	//		cout << codes[i] << endl;
-	//	}
-	//	waitKey(0);
-	//	return 1;
-	//#endif
+
+	//const string filename = "test.png";
+	//Mat image = imread(filename, 0);
+	//string code;
+	//bool res = decode_image(image, code);
+	//if (res)
+	//	cout << "decode result : " << code << endl;
+	//else
+	//	cout << "decode failed" << endl;
+	//waitKey(0);
+	//return 1;
+
 
 	//const string path = "d:\\test\\2.0\\1002647\\10108\\scandata\\Image"; // 2.0
-	const string path = "D:\\work\\volumeImage\\100004\\Image"; // 1.5
+	const string path = "D:\\work\\volumeImage\\101092\\Image"; // 1.5
 	const string datapath = path + "\\" + "ScanData.txt";
 	Rect roi(683, 460, 468, 270);
-	CheckCode(datapath, path, roi);
-
-	//Mat image = imread(filename, 0);
-	//Ref<Reader> reader(new MultiFormatReader);
-	//decode_image(reader, image);
+	CheckCode(datapath, path);
 
 	return 1;
 }
@@ -489,23 +400,23 @@ int read_image(Ref<LuminanceSource> source, bool hybrid,
 	}
 
 	if (res != 0) {
-		cout << (hybrid ? "Hybrid" : "Global")
-			<< " binarizer failed: " << cell_result << std::endl;
+		//cout << (hybrid ? "Hybrid" : "Global")
+		//	<< " binarizer failed: " << cell_result << std::endl;
 	}
 	else  {
-		cout << (hybrid ? "Hybrid" : "Global")
-			<< " binarizer succeeded: " << std::endl;
+		//cout << (hybrid ? "Hybrid" : "Global")
+		//	<< " binarizer succeeded: " << std::endl;
 		for (size_t i = 0; i < results.size(); i++) {
-			cout << "  Format: "
-				<< BarcodeFormat::barcodeFormatNames[results[i]->getBarcodeFormat()]
-				<< std::endl;
+			//cout << "  Format: "
+			//	<< BarcodeFormat::barcodeFormatNames[results[i]->getBarcodeFormat()]
+			//	<< std::endl;
 			for (int j = 0; j < results[i]->getResultPoints()->size(); j++) {
-				cout << "  Point[" << j << "]: "
-					<< results[i]->getResultPoints()[j]->getX() << " "
-					<< results[i]->getResultPoints()[j]->getY() << std::endl;
+			//	cout << "  Point[" << j << "]: "
+			//		<< results[i]->getResultPoints()[j]->getX() << " "
+			//		<< results[i]->getResultPoints()[j]->getY() << std::endl;
 			}
-			cout << "    ";
-			cout << results[i]->getText()->getText() << std::endl;
+			//cout << "    ";
+			//cout << results[i]->getText()->getText() << std::endl;
 			codes.push_back(results[i]->getText()->getText());
 		}
 	}
@@ -562,21 +473,42 @@ int recognizeBarcode(const std::string& filename,
 	return hresult;
 }
 
-void decode_image(Reader *reader, cv::Mat &image)
+bool decode_image(cv::Mat &image, string& code, int& lib)
 {
 	try
 	{
+		//cout << "image size : " << image.cols << "; " << image.rows << endl;
 		Ref<OpenCVBitmapSource> source(new OpenCVBitmapSource(image));
-		Ref<Binarizer> binarizer(new GlobalHistogramBinarizer(source));
-		Ref<BinaryBitmap> bitmap(new BinaryBitmap(binarizer));
-		Ref<Result> result(reader->decode(bitmap, DecodeHints(DecodeHints::TRYHARDER_HINT)));//+DecodeHints::DEFAULT_HINT)));
-		cout << result->getText()->getText() << endl;
-		//Export the read barcode here
+		int hresult = 1;
+		bool use_hybrid = true; // default
+		vector<string> codes;
+		hresult = read_image(source, use_hybrid, codes);
+		if (hresult != 0) { // try using global mode if hybrid failed
+			hresult = read_image(source, false, codes);
+		}
+		if (hresult == 0) {
+			for (int i = 0; i < codes.size(); i++)
+			{
+				if (!codes[i].empty())
+					code = codes[i];
+			}
+			lib = 0;
+		}
+		else
+		{
+			if (DecodeByZBar(image, code))
+			{
+				hresult = 0;
+				lib = 1;
+			}
+		}
+		return hresult == 0;
 	}
 	catch (zxing::Exception& e)
 	{
 		//Export your failure to read the code here
 		cerr << "Error: " << e.what() << endl;
+		return false;
 	}
 }
 
@@ -597,7 +529,7 @@ string GetFileNameInDir(const char* fileDir)
 }
 
 
-void CheckCode(string pathfile, string dirpath, Rect roi)
+void CheckCode(string pathfile, string dirpath)
 {
 	ifstream ifs;
 	ifs.open(pathfile.c_str());
@@ -607,6 +539,7 @@ void CheckCode(string pathfile, string dirpath, Rect roi)
 	vector<string> failImages, wrongImages;
 	int all = 0, right = 0;
 	string line;
+	Rect roi;
 	while (true)
 	{
 		char buf[1024];
@@ -614,6 +547,15 @@ void CheckCode(string pathfile, string dirpath, Rect roi)
 		string line(buf);
 		if (line.empty())
 			break;
+		if (roi.width == 0)
+		{
+			int x = 0, y = 0, w = 0, h = 0;
+			sscanf(line.c_str(), "%d;%d;%d;%d;", &x, &y, &w, &h); // x, y, w, h
+			roi = Rect(x, y, w, h);
+			continue;
+		}
+
+		all++;
 
 		size_t extPos = line.find_last_of(";");
 		if (extPos == std::string::npos) {
@@ -629,34 +571,34 @@ void CheckCode(string pathfile, string dirpath, Rect roi)
 		// 识别客观题
 
 		Mat image = imread(fullpath, 0);
-		//ZXingBarcodeDetector zxingDetector;
-		//string code;
-		//if (zxingDetector.Detect(image, code))
-		//{
-		//	if (code == expected)
-		//		right++;
-		//	else
-		//		wrongImages.push_back(file);
-		//}
-		//else
-		//{
-		//	failImages.push_back(file);
-		//}
-
-		vector<string> codes;
-		if (recognizeBarcode(fullpath, roi, codes) != 0)
-			failImages.push_back(file);
-
-		for (size_t i = 0; i < codes.size(); i++)
+		Mat barcodeImage = image(roi);
+		string code;
+		int lib = -1;
+		if (decode_image(barcodeImage, code, lib))
 		{
-			cout << "reusult : " << codes[i] << endl;
-			ofs << codes[i] << endl;
-			all++;
-			if (codes[i] == expected)
+			if (code == expected)
 				right++;
 			else
+			{
+				if (lib == 0) // zxing
+				{
+					code = "";
+					DecodeByZBar(barcodeImage, code);
+					if (code == expected)
+					{
+						right++;
+						continue;
+					}
+				}
+				string libname = lib == 0 ? "zxing" : "zbar";
+				ofs << file << " , " << expected << " , " << code << " , " << libname << endl;
 				wrongImages.push_back(file);
+			}
+				
 		}
+		else
+			failImages.push_back(file);
+
 	}
 
 	ofs << "decode fail size : " << failImages.size() << endl;
@@ -665,11 +607,11 @@ void CheckCode(string pathfile, string dirpath, Rect roi)
 		ofs << failImages[i] << endl;
 	}
 
-	ofs << "decode wrong size : " << wrongImages.size() << endl;
-	for (size_t i = 0; i < wrongImages.size(); i++)
-	{
-		ofs << wrongImages[i] << endl;
-	}
+	//ofs << "decode wrong size : " << wrongImages.size() << endl;
+	//for (size_t i = 0; i < wrongImages.size(); i++)
+	//{
+	//	ofs << wrongImages[i] << endl;
+	//}
 
 	cout << "result : " << right << " / " << all << endl;
 	ofs << "result : " << right << " / " << all << endl;
@@ -678,4 +620,40 @@ void CheckCode(string pathfile, string dirpath, Rect roi)
 	ifs.close();
 	ofs.close();
 	waitKey(0);
+}
+
+bool DecodeByZBar(Mat& img, string& code)
+{
+	if (img.data == NULL)
+		return false;
+
+	Mat tmpl(img.rows, img.cols, CV_8UC1);
+	img.copyTo(tmpl);
+
+	// create a reader
+	zbar::ImageScanner scanner;
+
+	// configure the reader
+	scanner.set_config(zbar::ZBAR_NONE, zbar::ZBAR_CFG_ENABLE, 1);
+
+	const void *raw = tmpl.data;
+	zbar::Image image(tmpl.cols, tmpl.rows, "Y800", raw, tmpl.cols * tmpl.rows);
+
+	// scan the image for barcodes
+	int n = scanner.scan(image);
+	//cout << "DecodeByZBar n : " << n << endl;
+	bool success = false;
+	// extract results
+	for (zbar::Image::SymbolIterator symbol = image.symbol_begin();	symbol != image.symbol_end(); ++symbol) 
+	{
+		// do something useful with results
+		cout << "decoded " << symbol->get_type_name()
+			<< " symbol \"" << symbol->get_data() << '"' << endl;
+		code = string(symbol->get_data());
+		success = true;
+	}
+
+	// clean up
+	image.set_data(NULL, 0);
+	return success;
 }
