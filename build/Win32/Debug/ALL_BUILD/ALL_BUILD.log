@@ -1,0 +1,10 @@
+﻿生成启动时间为 2016/6/28 16:29:19。
+     1>项目“D:\project\zxing-cpp\build\ALL_BUILD.vcxproj”在节点 2 上(Build 个目标)。
+     1>CustomBuild:
+         Building Custom Rule D:/project/zxing-cpp/CMakeLists.txt
+         CMake does not need to re-run because D:\project\zxing-cpp\build\CMakeFiles\generate.stamp is up-to-date.
+     1>已完成生成项目“D:\project\zxing-cpp\build\ALL_BUILD.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.28

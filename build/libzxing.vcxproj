@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{8D8371DD-F540-38D6-AFB4-CCE348054451}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>libzxing</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\project\zxing-cpp\build\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libzxing.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libzxing</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\project\zxing-cpp\build\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">libzxing.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">libzxing</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\project\zxing-cpp\build\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">libzxing.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">libzxing</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\project\zxing-cpp\build\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">libzxing.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">libzxing</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;NO_ICONV=1;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;NO_ICONV=1;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;NO_ICONV=1;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;NO_ICONV=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;NO_ICONV=1;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;NO_ICONV=1;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;NO_ICONV=1;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;NO_ICONV=1;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\project\zxing-cpp\.\core\lib\win32;D:\project\zxing-cpp\.\core\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\project\zxing-cpp\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/project/zxing-cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/project/zxing-cpp -BD:/project/zxing-cpp/build --check-stamp-file D:\project\zxing-cpp\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/project/zxing-cpp/CMakeLists.txt;D:\project\zxing-cpp\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystem.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;D:\project\zxing-cpp\build\CMakeFiles\feature_tests.cxx;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;D:\project\zxing-cpp\cmake\FindIconv.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXSourceCompiles.cmake;D:\project\zxing-cpp\cmake\FindCPPUNIT.cmake;D:\project\zxing-cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\project\zxing-cpp\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/project/zxing-cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/project/zxing-cpp -BD:/project/zxing-cpp/build --check-stamp-file D:\project\zxing-cpp\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/project/zxing-cpp/CMakeLists.txt;D:\project\zxing-cpp\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystem.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;D:\project\zxing-cpp\build\CMakeFiles\feature_tests.cxx;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;D:\project\zxing-cpp\cmake\FindIconv.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXSourceCompiles.cmake;D:\project\zxing-cpp\cmake\FindCPPUNIT.cmake;D:\project\zxing-cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\project\zxing-cpp\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/project/zxing-cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/project/zxing-cpp -BD:/project/zxing-cpp/build --check-stamp-file D:\project\zxing-cpp\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/project/zxing-cpp/CMakeLists.txt;D:\project\zxing-cpp\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystem.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;D:\project\zxing-cpp\build\CMakeFiles\feature_tests.cxx;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;D:\project\zxing-cpp\cmake\FindIconv.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXSourceCompiles.cmake;D:\project\zxing-cpp\cmake\FindCPPUNIT.cmake;D:\project\zxing-cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\project\zxing-cpp\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/project/zxing-cpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HD:/project/zxing-cpp -BD:/project/zxing-cpp/build --check-stamp-file D:\project\zxing-cpp\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/project/zxing-cpp/CMakeLists.txt;D:\project\zxing-cpp\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystem.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;D:\project\zxing-cpp\build\CMakeFiles\feature_tests.cxx;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompiler.cmake.in;D:\project\zxing-cpp\build\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;D:\project\zxing-cpp\cmake\FindIconv.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CheckCXXSourceCompiles.cmake;D:\project\zxing-cpp\cmake\FindCPPUNIT.cmake;D:\project\zxing-cpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\project\zxing-cpp\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\project\zxing-cpp\core\src\win32\zxing\iconv.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\win32\zxing\stdint.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\aztec\AztecDetectorResult.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\aztec\AztecReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\aztec\decoder\Decoder.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\aztec\detector\Detector.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\BarcodeFormat.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\Binarizer.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\BinaryBitmap.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\ChecksumException.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\Array.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\BitArray.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\BitMatrix.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\BitSource.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\CharacterSetECI.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\Counted.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\DecoderResult.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\detector\JavaMath.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\detector\MathUtils.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\detector\MonochromeRectangleDetector.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\detector\WhiteRectangleDetector.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\DetectorResult.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\GlobalHistogramBinarizer.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\GreyscaleLuminanceSource.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\GreyscaleRotatedLuminanceSource.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\GridSampler.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\HybridBinarizer.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\IllegalArgumentException.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\PerspectiveTransform.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\Point.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\GenericGF.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\GenericGFPoly.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\ReedSolomonDecoder.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\ReedSolomonException.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\Str.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\common\StringUtils.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\DataMatrixReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\BitMatrixParser.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\DataBlock.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\DecodedBitStreamParser.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\Decoder.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\detector\CornerPoint.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\detector\Detector.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\detector\DetectorException.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\Version.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\DecodeHints.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\Exception.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\FormatException.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\IllegalStateException.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\InvertedLuminanceSource.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\LuminanceSource.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\multi\ByQuadrantReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\multi\GenericMultipleBarcodeReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\multi\MultipleBarcodeReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\multi\qrcode\detector\MultiDetector.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\multi\qrcode\detector\MultiFinderPatternFinder.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\multi\qrcode\QRCodeMultiReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\MultiFormatReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\NotFoundException.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\CodaBarReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\Code128Reader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\Code39Reader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\Code93Reader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\EAN13Reader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\EAN8Reader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\ITFReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\MultiFormatOneDReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\MultiFormatUPCEANReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\OneDReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\OneDResultPoint.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\UPCAReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\UPCEANReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\oned\UPCEReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\BitMatrixParser.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\DecodedBitStreamParser.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\Decoder.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\ec\ErrorCorrection.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\ec\ModulusGF.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\ec\ModulusPoly.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\pdf417\detector\Detector.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\pdf417\detector\LinesSampler.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\pdf417\PDF417Reader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\BitMatrixParser.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\DataBlock.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\DataMask.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\DecodedBitStreamParser.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\Decoder.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\Mode.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\AlignmentPattern.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\AlignmentPatternFinder.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\Detector.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\FinderPattern.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\FinderPatternFinder.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\FinderPatternInfo.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\ErrorCorrectionLevel.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\FormatInformation.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\QRCodeReader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\qrcode\Version.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\Reader.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\ReaderException.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\Result.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\ResultPoint.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\ResultPointCallback.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\zxing\ZXing.h" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\bigint\BigInteger.hh" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\bigint\BigIntegerAlgorithms.hh" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\bigint\BigIntegerLibrary.hh" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\bigint\BigIntegerUtils.hh" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\bigint\BigUnsigned.hh" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\bigint\BigUnsignedInABase.hh" />
+    <ClInclude Include="D:\project\zxing-cpp\core\src\bigint\NumberlikeArray.hh" />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\aztec\AztecDetectorResult.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\aztec\AztecReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\aztec\decoder\Decoder.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/aztec/decoder/Decoder.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\aztec\detector\Detector.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/aztec/detector/Detector.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\BarcodeFormat.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\Binarizer.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\BinaryBitmap.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\ChecksumException.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\BitArray.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\BitArrayIO.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\BitMatrix.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\BitSource.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\CharacterSetECI.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\DecoderResult.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\detector\MonochromeRectangleDetector.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\detector\WhiteRectangleDetector.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\DetectorResult.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\GlobalHistogramBinarizer.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\GreyscaleLuminanceSource.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\GreyscaleRotatedLuminanceSource.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\GridSampler.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\HybridBinarizer.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\IllegalArgumentException.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\PerspectiveTransform.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\GenericGF.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\GenericGFPoly.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\ReedSolomonDecoder.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\ReedSolomonException.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\Str.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\common\StringUtils.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\DataMatrixReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\BitMatrixParser.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/datamatrix/decoder/BitMatrixParser.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\DataBlock.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/datamatrix/decoder/DataBlock.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\DecodedBitStreamParser.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/datamatrix/decoder/DecodedBitStreamParser.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\Decoder.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/datamatrix/decoder/Decoder.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\detector\CornerPoint.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\detector\Detector.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/datamatrix/detector/Detector.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\detector\DetectorException.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\datamatrix\Version.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/datamatrix/Version.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\DecodeHints.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\Exception.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\FormatException.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\InvertedLuminanceSource.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\LuminanceSource.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\multi\ByQuadrantReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\multi\GenericMultipleBarcodeReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\multi\MultipleBarcodeReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\multi\qrcode\detector\MultiDetector.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\multi\qrcode\detector\MultiFinderPatternFinder.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\multi\qrcode\QRCodeMultiReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\MultiFormatReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\CodaBarReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\Code128Reader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\Code39Reader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\Code93Reader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\EAN13Reader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\EAN8Reader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\ITFReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\MultiFormatOneDReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\MultiFormatUPCEANReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\OneDReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\OneDResultPoint.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\UPCAReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\UPCEANReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\oned\UPCEReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\BitMatrixParser.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/pdf417/decoder/BitMatrixParser.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\DecodedBitStreamParser.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/pdf417/decoder/DecodedBitStreamParser.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\Decoder.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/pdf417/decoder/Decoder.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\ec\ErrorCorrection.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\ec\ModulusGF.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\ec\ModulusPoly.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\pdf417\detector\Detector.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/pdf417/detector/Detector.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\pdf417\detector\LinesSampler.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\pdf417\PDF417Reader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\BitMatrixParser.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/qrcode/decoder/BitMatrixParser.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\DataBlock.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/qrcode/decoder/DataBlock.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\DataMask.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\DecodedBitStreamParser.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/qrcode/decoder/DecodedBitStreamParser.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\Decoder.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/qrcode/decoder/Decoder.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\Mode.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\AlignmentPattern.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\AlignmentPatternFinder.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\Detector.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/qrcode/detector/Detector.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\FinderPattern.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\FinderPatternFinder.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\detector\FinderPatternInfo.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\ErrorCorrectionLevel.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\FormatInformation.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\QRCodeReader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\qrcode\Version.cpp" >
+      <ObjectFileName>$(IntDir)/core/src/zxing/qrcode/Version.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\Reader.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\Result.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\ResultIO.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\ResultPoint.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\zxing\ResultPointCallback.cpp"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\bigint\BigInteger.cc"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\bigint\BigIntegerAlgorithms.cc"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\bigint\BigIntegerUtils.cc"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\bigint\BigUnsigned.cc"  />
+    <ClCompile Include="D:\project\zxing-cpp\core\src\bigint\BigUnsignedInABase.cc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/project/zxing-cpp/build/ZERO_CHECK.vcxproj">
+      <Project>32E891CC-43A5-39F1-B464-50266973042A</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

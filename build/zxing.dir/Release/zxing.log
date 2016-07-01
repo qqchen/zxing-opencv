@@ -1,0 +1,17 @@
+﻿生成启动时间为 2016/7/1 10:47:08。
+     1>项目“D:\project\zxing-cpp\build\zxing.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"zxing.dir\Release\\" /Fd"zxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\cli\src\main.cpp"
+         main.cpp
+     1>D:\project\zxing-cpp\cli\src\main.cpp(490): warning C4018: “<”: 有符号/无符号不匹配
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\project\zxing-cpp\build\Release\zxing.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib Release\libzxing.lib opencv_core249.lib opencv_highgui249.lib opencv_imgproc249.lib "libzbar-0.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"D:/project/zxing-cpp/build/Release/zxing.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/project/zxing-cpp/build/Release/zxing.lib" /MACHINE:X86 /SAFESEH  /machine:X86 zxing.dir\Release\ImageReaderSource.obj
+         zxing.dir\Release\jpgd.obj
+         zxing.dir\Release\lodepng.obj
+         zxing.dir\Release\main.obj
+         zxing.vcxproj -> D:\project\zxing-cpp\build\Release\zxing.exe
+     1>已完成生成项目“D:\project\zxing-cpp\build\zxing.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.34

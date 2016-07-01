@@ -1,0 +1,10 @@
+﻿生成启动时间为 2016/6/30 14:44:30。
+     1>项目“D:\project\zxing-cpp\build\ZERO_CHECK.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>CustomBuild:
+         Checking Build System
+         CMake does not need to re-run because D:/project/zxing-cpp/build/CMakeFiles/generate.stamp is up-to-date.
+     1>已完成生成项目“D:\project\zxing-cpp\build\ZERO_CHECK.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.33

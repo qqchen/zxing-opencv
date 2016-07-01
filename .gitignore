@@ -1,6 +1,5 @@
 .DS_Store
 /.idea/
-/build/
 *.opensdf
 *.obj
 Debug/*

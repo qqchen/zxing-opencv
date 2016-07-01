@@ -1,0 +1,241 @@
+﻿生成启动时间为 2016/6/30 14:44:30。
+     1>项目“D:\project\zxing-cpp\build\libzxing.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>CustomBuild:
+         Building Custom Rule D:/project/zxing-cpp/CMakeLists.txt
+         CMake does not need to re-run because D:\project\zxing-cpp\build\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\\" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\aztec\AztecDetectorResult.cpp" "D:\project\zxing-cpp\core\src\zxing\aztec\AztecReader.cpp" "D:\project\zxing-cpp\core\src\zxing\BarcodeFormat.cpp" "D:\project\zxing-cpp\core\src\zxing\Binarizer.cpp" "D:\project\zxing-cpp\core\src\zxing\BinaryBitmap.cpp" "D:\project\zxing-cpp\core\src\zxing\ChecksumException.cpp" "D:\project\zxing-cpp\core\src\zxing\common\BitArray.cpp" "D:\project\zxing-cpp\core\src\zxing\common\BitArrayIO.cpp" "D:\project\zxing-cpp\core\src\zxing\common\BitMatrix.cpp" "D:\project\zxing-cpp\core\src\zxing\common\BitSource.cpp" "D:\project\zxing-cpp\core\src\zxing\common\CharacterSetECI.cpp" "D:\project\zxing-cpp\core\src\zxing\common\DecoderResult.cpp" "D:\project\zxing-cpp\core\src\zxing\common\detector\MonochromeRectangleDetector.cpp" "D:\project\zxing-cpp\core\src\zxing\common\detector\WhiteRectangleDetector.cpp" "D:\project\zxing-cpp\core\src\zxing\common\DetectorResult.cpp" "D:\project\zxing-cpp\core\src\zxing\common\GlobalHistogramBinarizer.cpp" "D:\project\zxing-cpp\core\src\zxing\common\GreyscaleLuminanceSource.cpp" "D:\project\zxing-cpp\core\src\zxing\common\GreyscaleRotatedLuminanceSource.cpp" "D:\project\zxing-cpp\core\src\zxing\common\GridSampler.cpp" "D:\project\zxing-cpp\core\src\zxing\common\HybridBinarizer.cpp" "D:\project\zxing-cpp\core\src\zxing\common\IllegalArgumentException.cpp" "D:\project\zxing-cpp\core\src\zxing\common\PerspectiveTransform.cpp" "D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\GenericGF.cpp" "D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\GenericGFPoly.cpp" "D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\ReedSolomonDecoder.cpp" "D:\project\zxing-cpp\core\src\zxing\common\reedsolomon\ReedSolomonException.cpp" "D:\project\zxing-cpp\core\src\zxing\common\Str.cpp" "D:\project\zxing-cpp\core\src\zxing\common\StringUtils.cpp" "D:\project\zxing-cpp\core\src\zxing\datamatrix\DataMatrixReader.cpp" "D:\project\zxing-cpp\core\src\zxing\datamatrix\detector\CornerPoint.cpp" "D:\project\zxing-cpp\core\src\zxing\datamatrix\detector\DetectorException.cpp" "D:\project\zxing-cpp\core\src\zxing\DecodeHints.cpp" "D:\project\zxing-cpp\core\src\zxing\Exception.cpp" "D:\project\zxing-cpp\core\src\zxing\FormatException.cpp" "D:\project\zxing-cpp\core\src\zxing\InvertedLuminanceSource.cpp" "D:\project\zxing-cpp\core\src\zxing\LuminanceSource.cpp" "D:\project\zxing-cpp\core\src\zxing\multi\ByQuadrantReader.cpp" "D:\project\zxing-cpp\core\src\zxing\multi\GenericMultipleBarcodeReader.cpp" "D:\project\zxing-cpp\core\src\zxing\multi\MultipleBarcodeReader.cpp" "D:\project\zxing-cpp\core\src\zxing\multi\qrcode\detector\MultiDetector.cpp" "D:\project\zxing-cpp\core\src\zxing\multi\qrcode\detector\MultiFinderPatternFinder.cpp" "D:\project\zxing-cpp\core\src\zxing\multi\qrcode\QRCodeMultiReader.cpp" "D:\project\zxing-cpp\core\src\zxing\MultiFormatReader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\CodaBarReader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\Code128Reader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\Code39Reader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\Code93Reader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\EAN13Reader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\EAN8Reader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\ITFReader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\MultiFormatOneDReader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\MultiFormatUPCEANReader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\OneDReader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\OneDResultPoint.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\UPCAReader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\UPCEANReader.cpp" "D:\project\zxing-cpp\core\src\zxing\oned\UPCEReader.cpp" "D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\ec\ErrorCorrection.cpp" "D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\ec\ModulusGF.cpp" "D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\ec\ModulusPoly.cpp" "D:\project\zxing-cpp\core\src\zxing\pdf417\detector\LinesSampler.cpp" "D:\project\zxing-cpp\core\src\zxing\pdf417\PDF417Reader.cpp" "D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\DataMask.cpp" "D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\Mode.cpp" "D:\project\zxing-cpp\core\src\zxing\qrcode\detector\AlignmentPattern.cpp" "D:\project\zxing-cpp\core\src\zxing\qrcode\detector\AlignmentPatternFinder.cpp" "D:\project\zxing-cpp\core\src\zxing\qrcode\detector\FinderPattern.cpp" "D:\project\zxing-cpp\core\src\zxing\qrcode\detector\FinderPatternFinder.cpp" "D:\project\zxing-cpp\core\src\zxing\qrcode\detector\FinderPatternInfo.cpp" "D:\project\zxing-cpp\core\src\zxing\qrcode\ErrorCorrectionLevel.cpp" "D:\project\zxing-cpp\core\src\zxing\qrcode\FormatInformation.cpp" "D:\project\zxing-cpp\core\src\zxing\qrcode\QRCodeReader.cpp" "D:\project\zxing-cpp\core\src\zxing\Reader.cpp" "D:\project\zxing-cpp\core\src\zxing\Result.cpp" "D:\project\zxing-cpp\core\src\zxing\ResultIO.cpp" "D:\project\zxing-cpp\core\src\zxing\ResultPoint.cpp" "D:\project\zxing-cpp\core\src\zxing\ResultPointCallback.cpp" "D:\project\zxing-cpp\core\src\bigint\BigInteger.cc" "D:\project\zxing-cpp\core\src\bigint\BigIntegerAlgorithms.cc" "D:\project\zxing-cpp\core\src\bigint\BigIntegerUtils.cc" "D:\project\zxing-cpp\core\src\bigint\BigUnsigned.cc" "D:\project\zxing-cpp\core\src\bigint\BigUnsignedInABase.cc"
+         AztecDetectorResult.cpp
+         AztecReader.cpp
+         BarcodeFormat.cpp
+         Binarizer.cpp
+         BinaryBitmap.cpp
+         ChecksumException.cpp
+         BitArray.cpp
+         BitArrayIO.cpp
+         BitMatrix.cpp
+         BitSource.cpp
+         CharacterSetECI.cpp
+         DecoderResult.cpp
+         MonochromeRectangleDetector.cpp
+         WhiteRectangleDetector.cpp
+         DetectorResult.cpp
+         GlobalHistogramBinarizer.cpp
+         GreyscaleLuminanceSource.cpp
+         GreyscaleRotatedLuminanceSource.cpp
+         GridSampler.cpp
+         HybridBinarizer.cpp
+         正在生成代码...
+         正在编译...
+         IllegalArgumentException.cpp
+         PerspectiveTransform.cpp
+         GenericGF.cpp
+         GenericGFPoly.cpp
+         ReedSolomonDecoder.cpp
+         ReedSolomonException.cpp
+         Str.cpp
+         StringUtils.cpp
+         DataMatrixReader.cpp
+         CornerPoint.cpp
+         DetectorException.cpp
+         DecodeHints.cpp
+         Exception.cpp
+         FormatException.cpp
+         InvertedLuminanceSource.cpp
+         LuminanceSource.cpp
+         ByQuadrantReader.cpp
+         GenericMultipleBarcodeReader.cpp
+         MultipleBarcodeReader.cpp
+         MultiDetector.cpp
+         正在生成代码...
+         正在编译...
+         MultiFinderPatternFinder.cpp
+         QRCodeMultiReader.cpp
+         MultiFormatReader.cpp
+         CodaBarReader.cpp
+         Code128Reader.cpp
+         Code39Reader.cpp
+         Code93Reader.cpp
+         EAN13Reader.cpp
+         EAN8Reader.cpp
+         ITFReader.cpp
+         MultiFormatOneDReader.cpp
+         MultiFormatUPCEANReader.cpp
+         OneDReader.cpp
+         OneDResultPoint.cpp
+         UPCAReader.cpp
+         UPCEANReader.cpp
+         UPCEReader.cpp
+         ErrorCorrection.cpp
+         ModulusGF.cpp
+         ModulusPoly.cpp
+         正在生成代码...
+         正在编译...
+         LinesSampler.cpp
+         PDF417Reader.cpp
+         DataMask.cpp
+         Mode.cpp
+         AlignmentPattern.cpp
+         AlignmentPatternFinder.cpp
+         FinderPattern.cpp
+         FinderPatternFinder.cpp
+         FinderPatternInfo.cpp
+         ErrorCorrectionLevel.cpp
+         FormatInformation.cpp
+         QRCodeReader.cpp
+         Reader.cpp
+         Result.cpp
+         ResultIO.cpp
+         ResultPoint.cpp
+         ResultPointCallback.cpp
+         BigInteger.cc
+         BigIntegerAlgorithms.cc
+         BigIntegerUtils.cc
+         正在生成代码...
+         正在编译...
+         BigUnsigned.cc
+         BigUnsignedInABase.cc
+         正在生成代码...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/aztec/decoder/Decoder.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\aztec\decoder\Decoder.cpp"
+         Decoder.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/aztec/detector/Detector.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\aztec\detector\Detector.cpp"
+         Detector.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/datamatrix/decoder/BitMatrixParser.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\BitMatrixParser.cpp"
+         BitMatrixParser.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/datamatrix/decoder/DataBlock.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\DataBlock.cpp"
+         DataBlock.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/datamatrix/decoder/DecodedBitStreamParser.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\DecodedBitStreamParser.cpp"
+         DecodedBitStreamParser.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/datamatrix/decoder/Decoder.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\datamatrix\decoder\Decoder.cpp"
+         Decoder.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/datamatrix/detector/Detector.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\datamatrix\detector\Detector.cpp"
+         Detector.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/datamatrix/Version.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\datamatrix\Version.cpp"
+         Version.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/pdf417/decoder/BitMatrixParser.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\BitMatrixParser.cpp"
+         BitMatrixParser.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/pdf417/decoder/DecodedBitStreamParser.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\DecodedBitStreamParser.cpp"
+         DecodedBitStreamParser.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/pdf417/decoder/Decoder.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\pdf417\decoder\Decoder.cpp"
+         Decoder.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/pdf417/detector/Detector.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\pdf417\detector\Detector.cpp"
+         Detector.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/qrcode/decoder/BitMatrixParser.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\BitMatrixParser.cpp"
+         BitMatrixParser.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/qrcode/decoder/DataBlock.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\DataBlock.cpp"
+         DataBlock.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/qrcode/decoder/DecodedBitStreamParser.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\DecodedBitStreamParser.cpp"
+         DecodedBitStreamParser.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/qrcode/decoder/Decoder.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\qrcode\decoder\Decoder.cpp"
+         Decoder.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/qrcode/detector/Detector.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\qrcode\detector\Detector.cpp"
+         Detector.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\project\zxing-cpp\.\core\lib\win32" /I"D:\project\zxing-cpp\.\core\src" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D NO_ICONV=1 /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo"libzxing.dir\Release\/core/src/zxing/qrcode/Version.cpp.obj" /Fd"libzxing.dir\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\project\zxing-cpp\core\src\zxing\qrcode\Version.cpp"
+         Version.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\project\zxing-cpp\build\Release\libzxing.lib" /NOLOGO  /machine:X86 libzxing.dir\Release\AztecDetectorResult.obj
+         libzxing.dir\Release\AztecReader.obj
+         libzxing.dir\Release\BarcodeFormat.obj
+         libzxing.dir\Release\Binarizer.obj
+         libzxing.dir\Release\BinaryBitmap.obj
+         libzxing.dir\Release\ChecksumException.obj
+         libzxing.dir\Release\BitArray.obj
+         libzxing.dir\Release\BitArrayIO.obj
+         libzxing.dir\Release\BitMatrix.obj
+         libzxing.dir\Release\BitSource.obj
+         libzxing.dir\Release\CharacterSetECI.obj
+         libzxing.dir\Release\DecoderResult.obj
+         libzxing.dir\Release\MonochromeRectangleDetector.obj
+         libzxing.dir\Release\WhiteRectangleDetector.obj
+         libzxing.dir\Release\DetectorResult.obj
+         libzxing.dir\Release\GlobalHistogramBinarizer.obj
+         libzxing.dir\Release\GreyscaleLuminanceSource.obj
+         libzxing.dir\Release\GreyscaleRotatedLuminanceSource.obj
+         libzxing.dir\Release\GridSampler.obj
+         libzxing.dir\Release\HybridBinarizer.obj
+         libzxing.dir\Release\IllegalArgumentException.obj
+         libzxing.dir\Release\PerspectiveTransform.obj
+         libzxing.dir\Release\GenericGF.obj
+         libzxing.dir\Release\GenericGFPoly.obj
+         libzxing.dir\Release\ReedSolomonDecoder.obj
+         libzxing.dir\Release\ReedSolomonException.obj
+         libzxing.dir\Release\Str.obj
+         libzxing.dir\Release\StringUtils.obj
+         libzxing.dir\Release\DataMatrixReader.obj
+         libzxing.dir\Release\CornerPoint.obj
+         libzxing.dir\Release\DetectorException.obj
+         libzxing.dir\Release\DecodeHints.obj
+         libzxing.dir\Release\Exception.obj
+         libzxing.dir\Release\FormatException.obj
+         libzxing.dir\Release\InvertedLuminanceSource.obj
+         libzxing.dir\Release\LuminanceSource.obj
+         libzxing.dir\Release\ByQuadrantReader.obj
+         libzxing.dir\Release\GenericMultipleBarcodeReader.obj
+         libzxing.dir\Release\MultipleBarcodeReader.obj
+         libzxing.dir\Release\MultiDetector.obj
+         libzxing.dir\Release\MultiFinderPatternFinder.obj
+         libzxing.dir\Release\QRCodeMultiReader.obj
+         libzxing.dir\Release\MultiFormatReader.obj
+         libzxing.dir\Release\CodaBarReader.obj
+         libzxing.dir\Release\Code128Reader.obj
+         libzxing.dir\Release\Code39Reader.obj
+         libzxing.dir\Release\Code93Reader.obj
+         libzxing.dir\Release\EAN13Reader.obj
+         libzxing.dir\Release\EAN8Reader.obj
+         libzxing.dir\Release\ITFReader.obj
+         libzxing.dir\Release\MultiFormatOneDReader.obj
+         libzxing.dir\Release\MultiFormatUPCEANReader.obj
+         libzxing.dir\Release\OneDReader.obj
+         libzxing.dir\Release\OneDResultPoint.obj
+         libzxing.dir\Release\UPCAReader.obj
+         libzxing.dir\Release\UPCEANReader.obj
+         libzxing.dir\Release\UPCEReader.obj
+         libzxing.dir\Release\ErrorCorrection.obj
+         libzxing.dir\Release\ModulusGF.obj
+         libzxing.dir\Release\ModulusPoly.obj
+         libzxing.dir\Release\LinesSampler.obj
+         libzxing.dir\Release\PDF417Reader.obj
+         libzxing.dir\Release\DataMask.obj
+         libzxing.dir\Release\Mode.obj
+         libzxing.dir\Release\AlignmentPattern.obj
+         libzxing.dir\Release\AlignmentPatternFinder.obj
+         libzxing.dir\Release\FinderPattern.obj
+         libzxing.dir\Release\FinderPatternFinder.obj
+         libzxing.dir\Release\FinderPatternInfo.obj
+         libzxing.dir\Release\ErrorCorrectionLevel.obj
+         libzxing.dir\Release\FormatInformation.obj
+         libzxing.dir\Release\QRCodeReader.obj
+         libzxing.dir\Release\Reader.obj
+         libzxing.dir\Release\Result.obj
+         libzxing.dir\Release\ResultIO.obj
+         libzxing.dir\Release\ResultPoint.obj
+         libzxing.dir\Release\ResultPointCallback.obj
+         libzxing.dir\Release\BigInteger.obj
+         libzxing.dir\Release\BigIntegerAlgorithms.obj
+         libzxing.dir\Release\BigIntegerUtils.obj
+         libzxing.dir\Release\BigUnsigned.obj
+         libzxing.dir\Release\BigUnsignedInABase.obj
+         libzxing.dir\Release\/core/src/zxing/aztec/decoder/Decoder.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/aztec/detector/Detector.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/datamatrix/decoder/BitMatrixParser.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/datamatrix/decoder/DataBlock.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/datamatrix/decoder/DecodedBitStreamParser.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/datamatrix/decoder/Decoder.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/datamatrix/detector/Detector.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/datamatrix/Version.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/pdf417/decoder/BitMatrixParser.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/pdf417/decoder/DecodedBitStreamParser.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/pdf417/decoder/Decoder.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/pdf417/detector/Detector.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/qrcode/decoder/BitMatrixParser.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/qrcode/decoder/DataBlock.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/qrcode/decoder/DecodedBitStreamParser.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/qrcode/decoder/Decoder.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/qrcode/detector/Detector.cpp.obj
+         libzxing.dir\Release\/core/src/zxing/qrcode/Version.cpp.obj
+         libzxing.vcxproj -> D:\project\zxing-cpp\build\Release\libzxing.lib
+     1>已完成生成项目“D:\project\zxing-cpp\build\libzxing.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:33.16
