@@ -226,7 +226,7 @@ int main()
 
 
 	//const string path = "d:\\test\\2.0\\1002647\\10108\\scandata\\Image"; // 2.0
-	const string path = "D:\\work\\volumeImage\\101092\\Image"; // 1.5
+	const string path = "D:\\work\\volumeImage\\74643\\Image"; // 1.5
 	const string datapath = path + "\\" + "ScanData.txt";
 	Rect roi(683, 460, 468, 270);
 	CheckCode(datapath, path);
@@ -565,31 +565,32 @@ void CheckCode(string pathfile, string dirpath)
 		std::string file = line.substr(0, extPos);
 		std::string expected = line.substr(extPos + 1, line.size() - extPos - 1);
 		cout << "file : " << file << endl;
-		cout << "expected : " << expected << endl;
+		cout << "expected : " << expected ;
 
 		string fullpath = dirpath + "\\" + file;
-		// 识别客观题
-
 		Mat image = imread(fullpath, 0);
 		Mat barcodeImage = image(roi);
 		string code;
 		int lib = -1;
-		if (decode_image(barcodeImage, code, lib))
+		if (decode_image(barcodeImage, code, lib)) // 先用zxing，然后用zbar
 		{
-			if (code == expected)
-				right++;
-			else
+			if (code != expected) // 如果能识别，但结果不对，并且用的是zxing,则再用zbar再试试
 			{
 				if (lib == 0) // zxing
 				{
 					code = "";
 					DecodeByZBar(barcodeImage, code);
-					if (code == expected)
-					{
-						right++;
-						continue;
-					}
 				}
+			}
+
+			if (code == expected)
+			{
+				right++;
+				cout << " right!" << endl;
+			}
+			else
+			{
+				cout << " error!" << endl;
 				string libname = lib == 0 ? "zxing" : "zbar";
 				ofs << file << " , " << expected << " , " << code << " , " << libname << endl;
 				wrongImages.push_back(file);
@@ -597,7 +598,11 @@ void CheckCode(string pathfile, string dirpath)
 				
 		}
 		else
+		{
 			failImages.push_back(file);
+			cout << " failed!" << endl;
+		}
+			
 
 	}
 
@@ -647,8 +652,8 @@ bool DecodeByZBar(Mat& img, string& code)
 	for (zbar::Image::SymbolIterator symbol = image.symbol_begin();	symbol != image.symbol_end(); ++symbol) 
 	{
 		// do something useful with results
-		cout << "decoded " << symbol->get_type_name()
-			<< " symbol \"" << symbol->get_data() << '"' << endl;
+		//cout << "decoded " << symbol->get_type_name()
+		//	<< " symbol \"" << symbol->get_data() << '"' << endl;
 		code = string(symbol->get_data());
 		success = true;
 	}
